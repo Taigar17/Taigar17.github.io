@@ -18,17 +18,16 @@ With 4+ years of experience in QA for video games, I’ve worked across multiple
 
 ## 🗂️ Projects
 
-Here are a few featured projects from my portfolio:
+Here are a few mentioned projects examples for my portfolio:
+(Can't mention too many as some are confidential 😉)
 
 | Project | Description | Technologies |
 |--------|-------------|--------------|
-| **[Game Title or QA Project Name]** | Tested multiplayer functionality and implemented regression test suites. | JIRA, Unity, Charles Proxy |
-| **[Mobile Game Test Project]** | Performed full lifecycle QA from alpha to release. | Android Studio, TestRail |
-| **[Automation Suite Sample]** | Built a test automation prototype for game UI flows. | Python, Appium, Selenium |
+| ** Exploratory & Regression Testing ** | Tested functionality of incoming Xbox games. | Excel, Excert, XboxDevKits |
+| ** Automation, Exploratory & Regression Testing ** | Planned, tested and automated functions of the HexWar games. | Xray, Jira, Postman/Newman |
+| **Automation Test Suite ** | Identified from project architecture core areas of QA: Performance & Integration | K6, InfluxDB, Grafana, Postman/Newman |
 
-Full details and screenshots available on the site.
-
-## 🚀 Tech Stack
+## 🚀 Tech Stack Skills
 
 - **Languages:** Python, JavaScript, HTML/CSS, Golang, C#, GDScript.
 - **QA Tools:** JIRA, Xray, Postman, k6, Grafana.
