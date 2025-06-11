@@ -680,6 +680,12 @@
 .fa-bug:before {
   content: "\f188";
 }
+.fa-solid.fa-bug:before {
+  content: "\f188";
+}
+.fa-bug-slash:before {
+  content: "\f188";
+}
 .fa-building:before {
   content: "\f1ad";
 }
