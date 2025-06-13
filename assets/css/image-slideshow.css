@@ -1,24 +1,19 @@
-/* Container hides overflow and defines visible area width */
 .slider-container {
-  width: 800px; /* Width to show ~5 images of 150px + gaps */
+  width: 800px;
   overflow: hidden;
   margin: 0 auto;
   padding: 20px 0;
 }
 
-/* Flex container for images in a row */
 .slider {
   display: flex;
   gap: 20px;
   animation: slide-left 20s linear infinite;
-  /* Important: width must fit all images + gaps */
-  width: calc((150px + 20px) * 14); /* 14 images total (7 duplicated) */
 }
 
-/* Fix image sizes, prevent shrinking */
 .slider img {
   width: 150px;
-  height: 112.5px; /* 4:3 aspect ratio */
+  height: 112.5px;
   object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
@@ -29,9 +24,9 @@
 .slider img:hover {
   transform: scale(1.2);
   z-index: 10;
+  position: relative;
 }
 
-/* Slide animation moves left by half the slider width (7 images + gaps) */
 @keyframes slide-left {
   0% {
     transform: translateX(0);
