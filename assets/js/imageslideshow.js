@@ -24,5 +24,3 @@ document.addEventListener("DOMContentLoaded", function () {
     slider.appendChild(img);
   });
 });
-
-console.log("imageslideshow.js loaded");

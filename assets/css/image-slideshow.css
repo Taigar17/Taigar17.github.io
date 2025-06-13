@@ -12,8 +12,8 @@
 }
 
 .slider img {
-  width: 150px;
-  height: 112.5px;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
