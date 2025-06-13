@@ -59,8 +59,14 @@
       })
       .each(function () {
         var $this = $(this),
-          id = $this.attr("href"),
-          $section = $(id);
+          href = $this.attr("href"),
+          id =
+            href.indexOf("#") === 0
+              ? href
+              : href.split("#")[1]
+              ? "#" + href.split("#")[1]
+              : null,
+          $section = id ? $(id) : $();
 
         // No section for this link? Bail.
         if ($section.length < 1) return;
@@ -69,21 +75,15 @@
         $section.scrollex({
           mode: "middle",
           initialize: function () {
-            // Deactivate section.
             if (browser.canUse("transition")) $section.addClass("inactive");
           },
           enter: function () {
-            // Activate section.
             $section.removeClass("inactive");
 
-            // No locked links? Deactivate all links and activate this section's one.
             if ($nav_a.filter(".active-locked").length == 0) {
               $nav_a.removeClass("active");
               $this.addClass("active");
-            }
-
-            // Otherwise, if this section's link is the one that's locked, unlock it.
-            else if ($this.hasClass("active-locked"))
+            } else if ($this.hasClass("active-locked"))
               $this.removeClass("active-locked");
           },
         });
