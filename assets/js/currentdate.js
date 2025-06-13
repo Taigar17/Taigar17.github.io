@@ -15,13 +15,20 @@ const diffSeconds = Math.floor(diffTime / 1000);
 const dateSpan = document.getElementById("date");
 if (dateSpan) {
   // Format date string, e.g. "June 13, 2025"
-  dateSpan.textContent = today.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+  dateSpan.textContent = today.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 }
 
 // Safely update experience counters if elements exist
-const updateElementText = (id, value) => {
+const updateElementText = (id, value, useLocaleString = true) => {
   const el = document.getElementById(id);
-  if (el) el.textContent = value.toLocaleString();
+  if (el)
+    el.textContent = useLocaleString
+      ? value.toLocaleString()
+      : value.toString();
 };
 
 updateElementText("experience-days", diffDays);
@@ -29,5 +36,5 @@ updateElementText("experience-hours", diffHours);
 updateElementText("experience-minutes", diffMinutes);
 updateElementText("experience-seconds", diffSeconds);
 
-// Update current year in footer if element exists
-updateElementText("year", today.getFullYear());
+// Update current year in footer if element exists WITHOUT comma
+updateElementText("year", today.getFullYear(), false);
