@@ -16,3 +16,4 @@ document.getElementById("experience-days").textContent = diffDays.toLocaleString
 document.getElementById("experience-hours").textContent = diffHours.toLocaleString();
 document.getElementById("experience-minutes").textContent = diffMinutes.toLocaleString();
 document.getElementById("experience-seconds").textContent = diffSeconds.toLocaleString();
+document.getElementById("year").textContent = new Date().getFullYear(); // Added to set current year in footer of page 
