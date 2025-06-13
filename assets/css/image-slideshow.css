@@ -8,30 +8,20 @@
 .slider {
   display: flex;
   gap: 20px;
-  animation: slide-left 20s linear infinite;
 }
 
 .slider img {
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 400px;
   object-fit: cover;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 30px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .slider img:hover {
   transform: scale(1.2);
   z-index: 10;
   position: relative;
-}
-
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-1 * ((150px + 20px) * 7)));
-  }
 }
