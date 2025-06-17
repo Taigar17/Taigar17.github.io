@@ -1,24 +1,24 @@
-@media (hover: hover) and (pointer: fine) {
-  /* Hide the system cursor on all elements */
-  * {
-    cursor: none !important;
-  }
+body.desktop * {
+  cursor: none !important;
+}
 
-  /* Custom cursor div */
-  .custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 30px; /* Resize here */
-    height: 30px;
-    background: url("../svg/custom-cursor-hover.svg") no-repeat center/contain;
-    pointer-events: none;
-    z-index: 99999; /* Increased z-index to stay on top */
-    transition: transform 0.05s linear;
-  }
+.custom-cursor {
+  display: none; /* default hidden */
+}
 
-  /* Change to click version */
-  .custom-cursor.clicking {
-    background-image: url("../svg/custom-cursor-click.svg");
-  }
+body.desktop .custom-cursor {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: url("../svg/custom-cursor-hover.svg") no-repeat center/contain;
+  pointer-events: none;
+  z-index: 99999;
+  transition: transform 0.05s linear;
+}
+
+body.desktop .custom-cursor.clicking {
+  background-image: url("../svg/custom-cursor-click.svg");
 }
