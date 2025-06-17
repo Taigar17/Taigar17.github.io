@@ -1,0 +1,15 @@
+/* Default PC size */
+.logo img {
+  width: 8000px;
+  height: auto;
+}
+
+/* Android */
+body.android .logo img {
+  width: 500px;
+}
+
+/* iOS */
+body.ios .logo img {
+  width: 500px;
+}
