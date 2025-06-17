@@ -1,8 +1,19 @@
 .slider-container {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.slider-frame {
+  background: white;
+  width: 90%;
+  max-width: 600px; /* fixed max size */
+  aspect-ratio: 3 / 2; /* makes it a square-like frame */
   overflow: hidden;
-  margin: 0 auto;
-  padding: 10px 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .slider {
@@ -12,12 +23,12 @@
 }
 
 .slider img {
-  width: 40vw; /* responsive width based on viewport */
-  max-width: 250px; /* limit on larger screens */
-  height: auto; /* let height scale */
-  aspect-ratio: 3 / 5; /* keeps image proportion */
+  width: 40vw;
+  max-width: 250px;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 12px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
   cursor: pointer;
