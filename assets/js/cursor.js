@@ -1,12 +1,16 @@
-function isDesktopDevice() {
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function isDesktop() {
   return (
-    !("ontouchstart" in window) && // no touch support
-    navigator.userAgent.match(/(Macintosh|Windows|Linux)/) && // likely desktop
+    !isIOS() &&
+    !("ontouchstart" in window || navigator.maxTouchPoints > 0) &&
     window.matchMedia("(hover: hover) and (pointer: fine)").matches
   );
 }
 
-if (isDesktopDevice()) {
+if (isDesktop()) {
   document.body.classList.add("desktop");
 
   const cursor = document.createElement("div");

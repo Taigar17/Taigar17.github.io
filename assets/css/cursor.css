@@ -1,9 +1,10 @@
+/* Hide the system cursor only if on desktop */
 body.desktop * {
   cursor: none !important;
 }
 
 .custom-cursor {
-  display: none; /* default hidden */
+  display: none; /* Hide by default */
 }
 
 body.desktop .custom-cursor {
