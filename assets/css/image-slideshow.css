@@ -6,14 +6,14 @@
 }
 
 .slider-frame {
-  background: white;
-  width: 90%;
-  max-width: 1200px;
-  aspect-ratio: 3 / 1;
+  background: none;
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  position: relative;
+  width: 100%; 
+  max-width: 1200px;
+  height: auto; 
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 0; 
 }
 
 .slider {
@@ -28,7 +28,7 @@
   height: auto;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -36,7 +36,7 @@
 
 .slider img:hover {
   transform: scale(1.1);
-  z-index: 10;
+  z-index: 20;
   position: relative;
 }
 

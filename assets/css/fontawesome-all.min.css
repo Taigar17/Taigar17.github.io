@@ -4654,3 +4654,21 @@
 .fas {
   font-weight: 900;
 }
+
+.icons a:before {
+  font-size: 2rem !important; /* control icon size */
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.icons a i {
+  font-size: 2rem !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  display: inline-block;
+  text-align: center;
+}
